@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/themes/terminus';
+@import '@skeletonlabs/skeleton/themes/wintry';
+
+:root {
+	--sqd-app-bg: var(--color-surface-50);
+	--sqd-app-fg: var(--base-font-color);
+	--sqd-shell-bg: var(--color-surface-100);
+	--sqd-chrome-bg: var(--color-surface-200);
+	--sqd-panel-bg: var(--color-surface-50);
+	--sqd-panel-strong-bg: var(--color-surface-100);
+	--sqd-border: color-mix(in srgb, var(--color-surface-950) 12%, transparent);
+	--sqd-muted-fg: color-mix(in srgb, var(--base-font-color) 68%, transparent);
+	--sqd-button-bg: var(--color-surface-100);
+	--sqd-button-bg-hover: var(--color-surface-200);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html[data-theme='terminus'] {
+	color-scheme: dark;
+	--sqd-app-bg: var(--color-surface-950);
+	--sqd-app-fg: var(--base-font-color-dark);
+	--sqd-shell-bg: var(--color-surface-900);
+	--sqd-chrome-bg: var(--color-surface-800);
+	--sqd-panel-bg: var(--color-surface-900);
+	--sqd-panel-strong-bg: var(--color-surface-800);
+	--sqd-border: color-mix(in srgb, var(--color-surface-50) 12%, transparent);
+	--sqd-muted-fg: color-mix(in srgb, var(--base-font-color-dark) 68%, transparent);
+	--sqd-button-bg: var(--color-surface-800);
+	--sqd-button-bg-hover: var(--color-surface-700);
+}
+
+html[data-theme='wintry'] {
+	color-scheme: light;
+}
+
+body {
+	margin: 0;
+	background: var(--sqd-app-bg);
+	color: var(--sqd-app-fg);
+	overflow: hidden;
+	font-family: var(--base-font-family), 'Segoe UI', sans-serif;
+}
+
+button {
+	font: inherit;
+}
+
+#svelte {
+	height: 100vh;
+	overflow: hidden;
+}
